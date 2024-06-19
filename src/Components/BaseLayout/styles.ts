@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface SideMenuProps {
+  isOpen: boolean;
+}
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -40,19 +44,71 @@ export const Logo = styled.img`
   width: 150px;
 `;
 
-export const Menu = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: row;
-  gap: 50px;
-  padding: 15px;
+export const MenuButton = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
 `;
 
-export const Button = styled.button`
-  background-color: #d7a37b;
+export const SideMenu = styled.div<SideMenuProps>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
   padding: 20px;
-  width: 150px;
+  transform: ${(props) =>
+    props.isOpen ? "translateX(0)" : "translateX(-100%)"};
+  transition: transform 0.3s ease;
+  z-index: 1000;
+`;
+
+export const SideMenuItem = styled.button`
+  background: none;
   border: none;
-  border-radius: 25px;
+  color: #fff;
+  font-size: 14px;
+  text-align: left;
+  padding: 10px 0;
+  cursor: pointer;
+  width: 100%;
+  position: relative;
+  transition: color 0.3s, background-color 0.3s, border-color 0.3s,
+    transform 0.3s;
+
+  &:hover {
+    border-color: #fff;
+    transform: scale(1.05);
+  }
+
+  &:hover:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 2px solid #fff;
+    transform: scale(1.1);
+    opacity: 0.5;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+`;
+
+export const Menu = styled.div`
+  margin-top: 25px;
+`;
+
+export const CloseButton = styled.button`
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  right: 10px;
 `;
