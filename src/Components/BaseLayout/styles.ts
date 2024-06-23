@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import { IMainProps } from "./types";
+
 interface SideMenuProps {
   isOpen: boolean;
 }
@@ -7,29 +9,33 @@ interface SideMenuProps {
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
-  height: 100vh;
+
+  background: linear-gradient(135deg, #d7a37b, #8b5e3c, #4d2e1a);
 `;
 
-export const Wrapper = styled.div`
+export const ContentMain = styled.div<IMainProps>``;
+
+export const Main = styled.main`
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
+  margin-inline: 60px;
+  margin-block: 30px;
+  background-color: white;
+  border-radius: 5px;
+  height: 100vh;
+  padding: 20px;
 `;
 
 export const Header = styled.header`
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 15px;
-  background: linear-gradient(135deg, #d7a37b, #8b5e3c, #4d2e1a);
+  margin-inline: 20px;
 `;
 
-export const TopHeader = styled.div`
+export const LogoAndTitle = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
   gap: 25px;
 `;
@@ -111,4 +117,9 @@ export const CloseButton = styled.button`
   position: absolute;
   top: 10px;
   right: 10px;
+`;
+
+export const Divider = styled.div`
+  border-bottom: 2.5px solid #d7a37b;
+  width: 100%;
 `;

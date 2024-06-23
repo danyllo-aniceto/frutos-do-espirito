@@ -1,18 +1,21 @@
 import {
   CloseButton,
   Container,
+  ContentMain,
+  Divider,
   Header,
   Logo,
+  LogoAndTitle,
+  Main,
   Menu,
   MenuButton,
   SideMenu,
   SideMenuItem,
   Title,
-  TopHeader,
-  Wrapper,
 } from "./styles";
 import { IBaseLayoutProps } from "./types";
 import logo from "./../../assets/treeBook.png";
+import paisagem from "./../../assets/paisagem.jpg";
 import { useState } from "react";
 
 export function BaseLayout({ children }: IBaseLayoutProps) {
@@ -25,13 +28,13 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
   return (
     <Container>
       <Header>
-        <TopHeader>
+        <LogoAndTitle>
           <MenuButton onClick={toggleMenu}>&#9776;</MenuButton>
           <Title>Frutos do Espírito</Title>
-          <Logo src={logo} alt="logo" />
-        </TopHeader>
+        </LogoAndTitle>
+        <Logo src={logo} alt="logo" />
       </Header>
-
+      <Divider />
       <SideMenu isOpen={menuOpen}>
         <CloseButton onClick={toggleMenu}>&times;</CloseButton>
         <Menu>
@@ -48,7 +51,9 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
         </Menu>
       </SideMenu>
 
-      <Wrapper>{children}</Wrapper>
+      <ContentMain backgroundUrl={paisagem}>
+        <Main>{children}</Main>
+      </ContentMain>
     </Container>
   );
 }
