@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-import { IMainProps } from "./types";
-
 interface SideMenuProps {
   isOpen: boolean;
 }
@@ -10,20 +8,28 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  background: linear-gradient(135deg, #d7a37b, #8b5e3c, #4d2e1a);
-`;
+  //background: linear-gradient(135deg, #b77f55, #704328, #3a190d);,
 
-export const ContentMain = styled.div<IMainProps>``;
+  background: linear-gradient(
+    -60deg,
+    #1c1c1c 10%,
+    #2c3e50 30%,
+    #34495e 50%,
+    #4c6b82 70%,
+    #5d6d7e 90%
+  );
+`;
 
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
   margin-inline: 60px;
   margin-block: 30px;
-  background-color: white;
+  //background-color: white;
   border-radius: 5px;
   height: 100vh;
   padding: 20px;
+  color: aliceblue;
 `;
 
 export const Header = styled.header`
@@ -41,20 +47,25 @@ export const LogoAndTitle = styled.div`
 `;
 
 export const Title = styled.span`
-  font-family: "Playwrite IS", cursive;
+  //font-family: "Playwrite IS", cursive;
+  //font-family: "Pacifico", cursive;
+  font-family: "Poetsen One", sans-serif;
   font-weight: 400;
-  font-size: 30px;
+  font-size: 55px;
+  color: #d7edff;
 `;
 
 export const Logo = styled.img`
-  width: 150px;
+  width: 200px;
+  color: #d7edff;
 `;
 
 export const MenuButton = styled.button`
+  color: #d7edff;
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 24px;
+  font-size: 30px;
 `;
 
 export const SideMenu = styled.div<SideMenuProps>`
@@ -120,6 +131,6 @@ export const CloseButton = styled.button`
 `;
 
 export const Divider = styled.div`
-  border-bottom: 2.5px solid #d7a37b;
+  border-bottom: 2.5px solid #d7edff;
   width: 100%;
 `;

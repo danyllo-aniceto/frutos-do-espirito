@@ -1,7 +1,6 @@
 import {
   CloseButton,
   Container,
-  ContentMain,
   Divider,
   Header,
   Logo,
@@ -14,8 +13,7 @@ import {
   Title,
 } from "./styles";
 import { IBaseLayoutProps } from "./types";
-import logo from "./../../assets/treeBook.png";
-import paisagem from "./../../assets/paisagem.jpg";
+import logo from "./../../assets/_e67ee415-41ed-419b-9e26-b13fadcbf287-removebg-preview.png";
 import { useState } from "react";
 
 export function BaseLayout({ children }: IBaseLayoutProps) {
@@ -50,10 +48,7 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
           <SideMenuItem>Domínio Próprio</SideMenuItem>
         </Menu>
       </SideMenu>
-
-      <ContentMain backgroundUrl={paisagem}>
-        <Main>{children}</Main>
-      </ContentMain>
+      <Main>{children}</Main>
     </Container>
   );
 }
