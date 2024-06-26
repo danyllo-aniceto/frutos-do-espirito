@@ -23,11 +23,11 @@ export const Container = styled.div`
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
-  margin-inline: 60px;
-  margin-block: 30px;
+  margin-inline: 40px;
+  margin-block: 10px;
   //background-color: white;
   border-radius: 5px;
-  height: 100vh;
+  //height: 100vh;
   padding: 20px;
   color: aliceblue;
 `;

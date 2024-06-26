@@ -5,7 +5,6 @@ export const ItemContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   cursor: pointer;
   transition: opacity 0.5s ease;
 `;
