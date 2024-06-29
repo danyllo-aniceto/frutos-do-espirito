@@ -45,9 +45,9 @@ export const CardContent = styled.div`
 export const Title = styled.span`
   margin-top: 15px;
   font-size: 28px;
-  font-family: "Playwrite IS", cursive;
+  font-family: "Poetsen One", sans-serif;
   font-weight: 400;
-  color: white; /* Cor do texto */
+  color: white;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 `;
 
@@ -58,7 +58,7 @@ export const Description = styled.p`
   font-family: "Roboto Condensed", sans-serif;
   margin-inline: 8px;
   font-weight: 400;
-  color: white; /* Cor do texto */
+  color: white;
   text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
 `;
 

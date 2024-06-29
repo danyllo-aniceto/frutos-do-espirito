@@ -47,7 +47,6 @@ const Carrossel: React.FC<ICarrosselProps> = ({ items }) => {
             titulo={items[currentIndex].titulo}
             imagemUrl={items[currentIndex].imagemUrl}
             descricao={items[currentIndex].descricao}
-            link={items[currentIndex].link}
             cor={items[currentIndex].cor}
           />
         </CarrosselItemWrapper>

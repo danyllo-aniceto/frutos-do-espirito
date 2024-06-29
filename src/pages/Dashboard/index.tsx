@@ -2,8 +2,10 @@ import { useEffect, useState } from "react";
 import { BaseLayout } from "../../Components/BaseLayout";
 import { Card } from "../../Components/Card";
 import Carrossel from "../../Components/Carrossel";
+//import { Carrossel } from "../../Components/Carrossel2";
 import items from "./items";
 import { CardContainer, CarrosselContainer, H1 } from "./style";
+import { CardCarousel } from "../../Components/CardCarrossel";
 
 export function Dashboard() {
   const [isWideScreen, setIsWideScreen] = useState(false);
@@ -25,10 +27,11 @@ export function Dashboard() {
   return (
     <BaseLayout>
       <H1>
-        Mas o fruto do Espírito é: amor, alegria, paz, longanimidade,
-        benignidade, bondade, fidelidade,mansidão, domínio próprio. Contra estas
-        coisas não há lei. - Gálatas 5: 22-23
+        &nbsp; "Mas o fruto do Espírito é: amor, alegria, paz, longanimidade,
+        benignidade, bondade, fidelidade, mansidão, domínio próprio. Contra
+        estas coisas não há lei." - Gálatas 5: 22-23
       </H1>
+
       {isWideScreen ? (
         <CardContainer>
           {items.map((item, index) => (
@@ -44,6 +47,7 @@ export function Dashboard() {
       ) : (
         <CarrosselContainer>
           <Carrossel items={items} />
+          {/* <CardCarousel items={items} /> */}
         </CarrosselContainer>
       )}
     </BaseLayout>

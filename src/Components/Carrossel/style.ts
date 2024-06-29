@@ -62,6 +62,11 @@ export const CarrosselContainer = styled.div<{ cor?: string }>`
   &:hover {
     animation: ${continuousDiagonalGradientAnimation} 5s linear infinite;
   }
+
+  @media (max-width: 400px) {
+    width: 250px;
+    height: 350px;
+  }
 `;
 
 export const CarrosselContent = styled.div`
@@ -110,15 +115,11 @@ export const BotaoNavegacao = styled.button`
   padding: 10px;
   transition: color 0.3s;
 
-  &:hover {
-    color: #333;
-  }
-
   &.anterior {
-    left: 10px;
+    left: -5px;
   }
 
   &.proximo {
-    right: 10px;
+    right: -5px;
   }
 `;

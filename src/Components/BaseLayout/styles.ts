@@ -23,13 +23,22 @@ export const Container = styled.div`
 export const Main = styled.main`
   display: flex;
   flex-direction: column;
-  margin-inline: 40px;
+  gap: 10px;
+  margin-inline: 30px;
   margin-block: 10px;
+  color: #fcfcfe;
   //background-color: white;
-  border-radius: 5px;
-  //height: 100vh;
+  //border-radius: 5px;
+  min-height: 100vh;
   padding: 20px;
-  color: aliceblue;
+
+  @media (max-width: 650px) {
+    margin-inline: 10px;
+  }
+  @media (max-width: 550px) {
+    margin-block: 2px;
+    padding: 10px;
+  }
 `;
 
 export const Header = styled.header`
@@ -37,6 +46,10 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   margin-inline: 20px;
+
+  @media (max-width: 415px) {
+    margin-inline: 5px;
+  }
 `;
 
 export const LogoAndTitle = styled.div`
@@ -44,28 +57,59 @@ export const LogoAndTitle = styled.div`
   flex-direction: row;
   align-items: center;
   gap: 25px;
+  @media (max-width: 550px) {
+    gap: 15px;
+  }
+  @media (max-width: 380px) {
+    gap: 5px;
+  }
 `;
 
 export const Title = styled.span`
-  //font-family: "Playwrite IS", cursive;
-  //font-family: "Pacifico", cursive;
   font-family: "Poetsen One", sans-serif;
   font-weight: 400;
   font-size: 55px;
-  color: #d7edff;
+  color: #fcfcfe;
+
+  @media (max-width: 650px) {
+    font-size: 35px;
+  }
+  @media (max-width: 550px) {
+    font-size: 25px;
+  }
+  @media (max-width: 380px) {
+    font-size: 18px;
+  }
 `;
 
 export const Logo = styled.img`
   width: 200px;
-  color: #d7edff;
+  color: #fcfcfe;
+
+  @media (max-width: 650px) {
+    width: 150px;
+  }
+
+  @media (max-width: 550px) {
+    width: 120px;
+  }
+  @media (max-width: 380px) {
+    width: 80px;
+  }
 `;
 
 export const MenuButton = styled.button`
-  color: #d7edff;
+  color: #fcfcfe;
   background: none;
   border: none;
   cursor: pointer;
   font-size: 30px;
+  @media (max-width: 550px) {
+    font-size: 20px;
+  }
+  @media (max-width: 380px) {
+    font-size: 12px;
+  }
 `;
 
 export const SideMenu = styled.div<SideMenuProps>`
@@ -131,6 +175,6 @@ export const CloseButton = styled.button`
 `;
 
 export const Divider = styled.div`
-  border-bottom: 2.5px solid #d7edff;
+  border-bottom: 2.5px solid #fcfcfe;
   width: 100%;
 `;

@@ -3,7 +3,6 @@ export interface ICarrosselProps {
     titulo: string;
     imagemUrl: string;
     descricao: string;
-    link: string;
     cor: string;
   }[];
 }

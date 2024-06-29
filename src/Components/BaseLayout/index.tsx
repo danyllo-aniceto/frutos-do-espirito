@@ -13,14 +13,36 @@ import {
   Title,
 } from "./styles";
 import { IBaseLayoutProps } from "./types";
-import logo from "./../../assets/_e67ee415-41ed-419b-9e26-b13fadcbf287-removebg-preview.png";
+import logo from "../../assets/_e67ee415-41ed-419b-9e26-b13fadcbf287-removebg-preview.png";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import items from "./../../pages/Dashboard/items";
 
 export function BaseLayout({ children }: IBaseLayoutProps) {
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleNavigation = (item: (typeof items)[0]) => {
+    toggleMenu();
+    navigate("/fruit-content", {
+      state: {
+        description: item.descricao,
+        color: item.cor,
+        imageUrl: item.imagemUrl,
+        title: item.titulo,
+      },
+    });
+    window.scrollTo(0, 0); // Scroll to top when navigating
+  };
+
+  const handleInicioNavigation = () => {
+    toggleMenu();
+    navigate("/");
+    window.scrollTo(0, 0); // Scroll to top when navigating
   };
 
   return (
@@ -36,16 +58,15 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
       <SideMenu isOpen={menuOpen}>
         <CloseButton onClick={toggleMenu}>&times;</CloseButton>
         <Menu>
-          <SideMenuItem>Início</SideMenuItem>
-          <SideMenuItem>Amor</SideMenuItem>
-          <SideMenuItem>Alegria</SideMenuItem>
-          <SideMenuItem>Paz</SideMenuItem>
-          <SideMenuItem>Longanimidade</SideMenuItem>
-          <SideMenuItem>Benignidade</SideMenuItem>
-          <SideMenuItem>Bondade</SideMenuItem>
-          <SideMenuItem>Fidelidade</SideMenuItem>
-          <SideMenuItem>Mansidão</SideMenuItem>
-          <SideMenuItem>Domínio Próprio</SideMenuItem>
+          <SideMenuItem onClick={handleInicioNavigation}>Início</SideMenuItem>
+          {items.map((item) => (
+            <SideMenuItem
+              key={item.titulo}
+              onClick={() => handleNavigation(item)}
+            >
+              {item.titulo}
+            </SideMenuItem>
+          ))}
         </Menu>
       </SideMenu>
       <Main>{children}</Main>

@@ -3,6 +3,17 @@ import styled from "styled-components";
 export const H1 = styled.h1`
   font-family: "Roboto Condensed", sans-serif;
   font-size: 25px;
+  text-align: justify;
+
+  @media (max-width: 650px) {
+    font-size: 18px;
+  }
+  @media (max-width: 550px) {
+    font-size: 14px;
+  }
+  @media (max-width: 380px) {
+    font-size: 12px;
+  }
 `;
 
 export const CarrosselContainer = styled.div`

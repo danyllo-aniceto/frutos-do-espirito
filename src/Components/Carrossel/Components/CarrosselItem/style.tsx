@@ -14,6 +14,11 @@ export const Imagem = styled.img`
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+
+  @media (max-width: 400px) {
+    width: 170px;
+    height: 170px;
+  }
 `;
 
 export const Titulo = styled.span`
@@ -21,8 +26,11 @@ export const Titulo = styled.span`
   font-size: 28px;
   font-family: "Playwrite IS", cursive;
   font-weight: 400;
-  color: white; /* Cor do texto */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Deslocamento X, Deslocamento Y, Desfoque, Cor */
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
 `;
 
 export const Descricao = styled.p`
@@ -32,6 +40,9 @@ export const Descricao = styled.p`
   font-family: "Roboto Condensed", sans-serif;
   margin-inline: 8px;
   font-weight: 400;
-  color: white; /* Cor do texto */
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3); /* Deslocamento X, Deslocamento Y, Desfoque, Cor */
+  color: white;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+  @media (max-width: 400px) {
+    font-size: 12px;
+  }
 `;
