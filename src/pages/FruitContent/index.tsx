@@ -8,50 +8,53 @@ import {
   Buttons,
   Button,
   BackButton,
+  StyledLink,
 } from "./style";
-import { useLocation, useNavigate } from "react-router-dom";
-import { IFruitContentProps } from "./types";
 import { useEffect } from "react";
-import { FiArrowLeft } from "react-icons/fi"; // Importando o ícone de seta esquerda
+import { FiArrowLeft } from "react-icons/fi";
+import { useParams, useNavigate } from "react-router-dom";
+import fruits from "./../../consts/fruits";
 
 export function FruitContent() {
-  const location = useLocation();
+  const { fruitId } = useParams<{ fruitId: string }>();
   const navigate = useNavigate();
-  const { color, description, imageUrl, title } =
-    (location.state as IFruitContentProps) || {};
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const handleBackToHome = () => {
-    navigate("/");
-  };
+  const fruit = fruits.find((fruit) => fruit.id === fruitId);
+
+  if (!fruit) return <div>Fruto não encontrado</div>;
 
   return (
     <BaseLayout>
-      <BackButton onClick={handleBackToHome} color={color}>
+      <BackButton color={fruit.color} onClick={() => navigate("/")}>
         <FiArrowLeft size={24} />
         Voltar para a Página Inicial
       </BackButton>
-      <Container color={color}>
+      <Container color={fruit.color}>
         <Text>
-          <Title>{title}</Title>
-          <Subtitle>{description}</Subtitle>
+          <Title>{fruit.name}</Title>
+          <Subtitle>{fruit.description}</Subtitle>
         </Text>
-        <Image src={imageUrl} alt={title} />
+        <Image src={fruit.image} alt={fruit.name} />
       </Container>
-      <Buttons color={color}>
-        <Button color={color}>Há perdão no Amor</Button>
-        <Button color={color}>O Amor que Transforma</Button>
-        <Button color={color}>Servindo com Amor</Button>
-        <Button color={color}>Ação e Compaixão</Button>
-        <Button color={color}>Abraçando o Amor de Deus</Button>
-        <Button color={color}>Cuidando de Si Mesmo com Amor</Button>
-        <Button color={color}>Construindo Laços de Amor</Button>
-        <Button color={color}>Relacionamentos Saudáveis</Button>
-        <Button color={color}>O Amor Sacrificial</Button>
-        <Button color={color}>Viver com Coração Grato</Button>
+      <Buttons>
+        {fruit.messages.length > 0 ? (
+          fruit.messages.map((message) => (
+            <StyledLink
+              to={`/fruit/${fruitId}/message/${message.id}`}
+              key={message.id}
+            >
+              <Button color={fruit.color}>{message.title}</Button>
+            </StyledLink>
+          ))
+        ) : (
+          <Button color={fruit.color} disabled>
+            Nenhuma mensagem disponível
+          </Button>
+        )}
       </Buttons>
     </BaseLayout>
   );

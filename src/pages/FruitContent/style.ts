@@ -1,4 +1,5 @@
 import styled, { keyframes } from "styled-components";
+import { Link as RouterLink } from "react-router-dom";
 
 const gradientAnimation = keyframes`
   0% {
@@ -118,4 +119,9 @@ export const BackButton = styled.button<{ color?: string }>`
   &:hover {
     color: #fefefe9e;
   }
+`;
+
+export const StyledLink = styled(RouterLink)`
+  text-decoration: none; /* Remove o sublinhado */
+  color: inherit; /* Mantém a cor padrão do texto */
 `;

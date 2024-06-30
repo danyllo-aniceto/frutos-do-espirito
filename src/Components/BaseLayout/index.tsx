@@ -16,7 +16,7 @@ import { IBaseLayoutProps } from "./types";
 import logo from "../../assets/_e67ee415-41ed-419b-9e26-b13fadcbf287-removebg-preview.png";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import items from "./../../pages/Dashboard/items";
+import fruits from "../../consts/fruits";
 
 export function BaseLayout({ children }: IBaseLayoutProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -26,16 +26,9 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
     setMenuOpen(!menuOpen);
   };
 
-  const handleNavigation = (item: (typeof items)[0]) => {
+  const handleNavigation = (fruitId: string) => {
     toggleMenu();
-    navigate("/fruit-content", {
-      state: {
-        description: item.descricao,
-        color: item.cor,
-        imageUrl: item.imagemUrl,
-        title: item.titulo,
-      },
-    });
+    navigate(`/fruit/${fruitId}`);
     window.scrollTo(0, 0); // Scroll to top when navigating
   };
 
@@ -59,12 +52,12 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
         <CloseButton onClick={toggleMenu}>&times;</CloseButton>
         <Menu>
           <SideMenuItem onClick={handleInicioNavigation}>Início</SideMenuItem>
-          {items.map((item) => (
+          {fruits.map((fruit) => (
             <SideMenuItem
-              key={item.titulo}
-              onClick={() => handleNavigation(item)}
+              key={fruit.id}
+              onClick={() => handleNavigation(fruit.id)}
             >
-              {item.titulo}
+              {fruit.name}
             </SideMenuItem>
           ))}
         </Menu>
