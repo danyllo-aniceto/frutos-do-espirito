@@ -44,7 +44,7 @@ const fruits: Fruit[] = [
     image: `${alegria}`,
     description:
       "Alegria como fruto do Espírito: contentamento e felicidade interior, independentes das circunstâncias externas.",
-    color: "#f7c900, #f1ff00, #f7c900",
+    color: "#f7c900, #eaf610, #f7c900",
     messages: messageAlegria,
   },
   {
