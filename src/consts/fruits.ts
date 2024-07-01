@@ -8,6 +8,7 @@ import fidelidade from "../../src/assets/fidelidade.jfif";
 import mansidao from "../../src/assets/mansidao.jfif";
 import dominioproprio from "../../src/assets/dominioproprio.jfif";
 import { messageAmor } from "./messageAmor";
+import { messageAlegria } from "./messageAlegria";
 
 export interface Message {
   id: string;
@@ -34,7 +35,7 @@ const fruits: Fruit[] = [
     image: `${amor}`,
     description:
       "Amor como fruto do Espírito: amor altruísta e incondicional, refletindo o amor divino.",
-    color: "rgb(216, 9, 20), rgb(221, 59, 68), rgb(216, 9, 20)",
+    color: "#eb1010, #f81033, #eb1010",
     messages: messageAmor,
   },
   {
@@ -43,8 +44,8 @@ const fruits: Fruit[] = [
     image: `${alegria}`,
     description:
       "Alegria como fruto do Espírito: contentamento e felicidade interior, independentes das circunstâncias externas.",
-    color: "#ffd900, #f7eb4c, #ffd900",
-    messages: [],
+    color: "#f7c900, #f1ff00, #f7c900",
+    messages: messageAlegria,
   },
   {
     id: "3",
@@ -70,7 +71,7 @@ const fruits: Fruit[] = [
     image: `${benignidade}`,
     description:
       "Benignidade como fruto do Espírito: bondade e gentileza em atitudes e ações.",
-    color: "#00da0b, #41fa4a, #00da0b",
+    color: "#26923a, #1dbe36, #26923a",
     messages: [],
   },
   {
@@ -79,7 +80,7 @@ const fruits: Fruit[] = [
     image: `${bondade}`,
     description:
       "Bondade como fruto do Espírito: disposição em fazer o bem e agir com generosidade.",
-    color: "#f731ab, #f85cbc, #f731ab",
+    color: "#f34a8e, #e86d87, #f34a8e",
     messages: [],
   },
   {
@@ -88,7 +89,7 @@ const fruits: Fruit[] = [
     image: `${fidelidade}`,
     description:
       "Fidelidade como fruto do Espírito: lealdade e constância em relação a Deus e aos outros.",
-    color: "#ff3c00, #fa6b3f, #ff3c00",
+    color: "#f17414, #ff8500, #f17414",
     messages: [],
   },
   {
@@ -106,7 +107,7 @@ const fruits: Fruit[] = [
     image: `${dominioproprio}`,
     description:
       "Domínio próprio como fruto do Espírito: autocontrole e disciplina sobre desejos e ações.",
-    color: "#8c00ff, #a646f5, #8c00ff",
+    color: "#6a10b5, #833cbe, #6a10b5",
     messages: [],
   },
 ];
