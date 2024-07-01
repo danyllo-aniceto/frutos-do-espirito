@@ -14,9 +14,6 @@ export const H1 = styled.h1`
   @media (max-width: 550px) {
     font-size: 14px;
   }
-  @media (max-width: 380px) {
-    font-size: 12px;
-  }
 `;
 
 export const CarrosselContainer = styled.div`

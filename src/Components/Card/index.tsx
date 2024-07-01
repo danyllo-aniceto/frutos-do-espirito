@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { CardContainer, CardContent, Description, Title, Image } from "./style";
 import { ICardProps } from "./types";
 
-export function Card({ description, color, imageUrl, title }: ICardProps) {
+export function Card({ description, color, image, name }: ICardProps) {
   const navigate = useNavigate();
 
   const handleClick = () => {
@@ -10,16 +10,16 @@ export function Card({ description, color, imageUrl, title }: ICardProps) {
       state: {
         description,
         color,
-        imageUrl,
-        title,
+        image,
+        name,
       },
     });
   };
   return (
     <CardContainer color={color} onClick={handleClick}>
       <CardContent>
-        <Image src={imageUrl} alt={title} />
-        <Title>{title}</Title>
+        <Image src={image} alt={name} />
+        <Title>{name}</Title>
         <Description>{description}</Description>
       </CardContent>
     </CardContainer>

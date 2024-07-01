@@ -1,6 +1,10 @@
+import { Message } from "../../consts/fruits";
+
 export interface ICardProps {
-  title: string;
-  imageUrl: string;
-  description: string;
+  id: string;
+  name: string;
+  image: string;
   color: string;
+  description: string;
+  messages: Message[];
 }

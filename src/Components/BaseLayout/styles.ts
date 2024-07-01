@@ -78,7 +78,7 @@ export const Title = styled.span`
     font-size: 25px;
   }
   @media (max-width: 380px) {
-    font-size: 18px;
+    font-size: 22px;
   }
 `;
 
