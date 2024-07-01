@@ -35,7 +35,7 @@ const fruits: Fruit[] = [
     image: `${amor}`,
     description:
       "Amor como fruto do Espírito: amor altruísta e incondicional, refletindo o amor divino.",
-    color: "#eb1010, #f81033, #eb1010",
+    color: "#b10c1a, #d91115, #b10c1a",
     messages: messageAmor,
   },
   {
