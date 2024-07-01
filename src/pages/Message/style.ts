@@ -108,3 +108,17 @@ export const BackButton = styled.button<{ color?: string }>`
     color: #fefefe9e;
   }
 `;
+
+export const Author = styled.h4`
+  color: #333;
+  align-self: flex-end;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+`;
+
+export const InstagramIcon = styled.img`
+  cursor: pointer;
+  width: 35px;
+`;

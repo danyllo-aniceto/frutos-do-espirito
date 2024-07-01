@@ -12,6 +12,8 @@ import { messageAmor } from "./messageAmor";
 export interface Message {
   id: string;
   title: string;
+  author: string;
+  instagram: string;
   verse: string | string[];
   text: string | string[];
 }

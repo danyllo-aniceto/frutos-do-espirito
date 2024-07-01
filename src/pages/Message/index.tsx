@@ -8,10 +8,13 @@ import {
   Title,
   ContentVerse,
   Verse,
+  Author,
+  InstagramIcon,
 } from "./style";
 import fruits from "./../../consts/fruits";
 import { FiArrowLeft } from "react-icons/fi";
 import ReactMarkdown from "react-markdown";
+import instagram from "./../../assets/instagram.png";
 
 export function Message() {
   const { fruitId, messageId } = useParams<{
@@ -24,6 +27,10 @@ export function Message() {
 
   if (!fruit) return <div>Fruto não encontrado</div>;
   if (!message) return <div>Mensagem não encontrada</div>;
+
+  const handleInstagramClick = () => {
+    window.open(`https://www.instagram.com/${message.instagram}`, "_blank");
+  };
 
   return (
     <BaseLayout>
@@ -56,6 +63,16 @@ export function Message() {
               ))
             )}
           </Text>
+          <Author>
+            {message.author}
+            {message.instagram && (
+              <InstagramIcon
+                onClick={handleInstagramClick}
+                src={instagram} // Substitua pelo caminho do seu ícone do Instagram
+                alt="Instagram"
+              />
+            )}
+          </Author>
         </ContentText>
       </Container>
     </BaseLayout>
