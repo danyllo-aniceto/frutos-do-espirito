@@ -28,8 +28,15 @@ export const CardContainer = styled.div<{ color?: string }>`
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out;
 
-  &:hover {
+  @media (min-width: 751px) {
+    &:hover {
+      animation: ${continuousDiagonalGradientAnimation} 5s linear infinite;
+    }
+  }
+
+  @media (max-width: 750px) {
     animation: ${continuousDiagonalGradientAnimation} 5s linear infinite;
+    filter: brightness(0.9);
   }
 `;
 
