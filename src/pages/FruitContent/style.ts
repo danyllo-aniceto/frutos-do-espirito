@@ -27,16 +27,25 @@ export const Container = styled.div<{ color?: string }>`
   background-size: 400% 400%;
   transition: transform 0.3s ease-in-out;
   animation: ${gradientAnimation} 5s linear infinite;
+  @media (max-width: 500px) {
+    padding: 15px;
+  }
 `;
 
 export const Title = styled.span`
   font-size: 25px;
   font-family: "Poetsen One", sans-serif;
+  @media (max-width: 500px) {
+    font-size: 20px;
+  }
 `;
 
 export const Subtitle = styled.p`
   font-family: "Roboto Condensed", sans-serif;
   font-size: 16px;
+  @media (max-width: 500px) {
+    font-size: 12px;
+  }
 `;
 
 export const Text = styled.div`
@@ -50,6 +59,9 @@ export const Text = styled.div`
 export const Image = styled.img`
   width: 150px;
   border-radius: 50%;
+  @media (max-width: 500px) {
+    width: 100px;
+  }
 `;
 
 export const Buttons = styled.div`

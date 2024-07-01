@@ -3,6 +3,8 @@ import { Dashboard } from "./pages/Dashboard";
 import { FruitContent } from "./pages/FruitContent";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Message } from "./pages/Message";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function App() {
   return (

@@ -5,6 +5,10 @@ export const Container = styled.div`
   background-color: #fefefe;
   border-radius: 8px;
   margin-top: 1em;
+  max-width: 100%;
+  @media (max-width: 500px) {
+    padding: 1em;
+  }
 `;
 
 export const ContentText = styled.div`
@@ -13,6 +17,7 @@ export const ContentText = styled.div`
   gap: 12px;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 `;
 
 export const Text = styled.p`
@@ -20,12 +25,22 @@ export const Text = styled.p`
   font-family: "Roboto Condensed", sans-serif;
   color: #333;
   font-weight: 400;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
 `;
 
 export const Title = styled.span`
   font-size: 40px;
   font-family: "Poetsen One", sans-serif;
   color: #fefefe;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  @media (max-width: 500px) {
+    font-size: 28px;
+  }
 `;
 
 const gradientAnimation = keyframes`
@@ -55,12 +70,26 @@ export const ContentVerse = styled.div<{ color?: string }>`
   background-size: 400% 400%;
   transition: transform 0.3s ease-in-out;
   animation: ${gradientAnimation} 5s linear infinite;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+  @media (max-width: 500px) {
+    padding: 8px;
+  }
 `;
 
 export const Verse = styled.h3`
   margin-inline: 5px;
   color: #fefefe;
   font-family: "Roboto Condensed", sans-serif;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  white-space: pre-wrap;
+  max-width: 100%;
+  @media (max-width: 500px) {
+    font-size: 16px;
+  }
 `;
 
 export const BackButton = styled.button<{ color?: string }>`

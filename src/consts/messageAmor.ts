@@ -4,7 +4,7 @@ export const messageAmor = [
     title: "Jesus nos ama",
     verse: [
       "'Porque Deus amou o mundo de tal maneira, que deu o seu Filho Unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.'",
-      "                                                                                                                          (João 3: 16)",
+      "(João 3: 16)",
     ],
     text: [
       "Sentir-se amado é saber que alguém se importa com você, com quem você é, por onde anda e o que faz. Procuramos incansavelmente um amor que possa nos dar tudo o que nossa mente deseja.",
