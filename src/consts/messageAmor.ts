@@ -3,7 +3,7 @@ export const messageAmor = [
     id: "am1",
     author: "Danyllo Aniceto",
     instagram: "danylloaniceto",
-    title: "Jesus nos ama",
+    title: "Jesus Nos Ama",
     verse: [
       "'Porque Deus amou o mundo de tal maneira, que deu o seu Filho Unigênito, para que todo aquele que nele crê não pereça, mas tenha a vida eterna.'",
       "(João 3: 16)",

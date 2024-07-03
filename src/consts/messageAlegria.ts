@@ -3,7 +3,7 @@ export const messageAlegria = [
     id: "al1",
     author: "Danyllo Aniceto",
     instagram: "danylloaniceto",
-    title: "Paulo e Silas na prisão",
+    title: "Paulo e Silas na Prisão",
     verse: [
       "‘Por volta da meia-noite, Paulo e Silas estavam orando e cantando hinos a Deus, e os outros presos os ouviam. De repente, houve um terremoto tão violento que os alicerces da prisão foram abalados. Imediatamente, todas as portas se abriram, e as correntes de todos se soltaram.’",
       "(Atos 16: 25-26 )",

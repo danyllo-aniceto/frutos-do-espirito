@@ -9,6 +9,7 @@ import mansidao from "../../src/assets/mansidao.jfif";
 import dominioproprio from "../../src/assets/dominioproprio.jfif";
 import { messageAmor } from "./messageAmor";
 import { messageAlegria } from "./messageAlegria";
+import { messagePaz } from "./messagePaz";
 
 export interface Message {
   id: string;
@@ -54,7 +55,7 @@ const fruits: Fruit[] = [
     description:
       "Paz como fruto do Espírito: tranquilidade interior e harmonia com Deus e os outros.",
     color: "#888888, #B0B0B0, #888888",
-    messages: [],
+    messages: messagePaz,
   },
   {
     id: "4",
@@ -70,7 +71,7 @@ const fruits: Fruit[] = [
     name: "Benignidade",
     image: `${benignidade}`,
     description:
-      "Benignidade como fruto do Espírito: bondade e gentileza em atitudes e ações.",
+      "Benignidade como fruto do Espírito: enfatiza a disposição de promover o bem e a paz, muitas vezes manifestada através de atos de generosidade e misericórdia.",
     color: "#26923a, #1dbe36, #26923a",
     messages: [],
   },
@@ -79,8 +80,8 @@ const fruits: Fruit[] = [
     name: "Bondade",
     image: `${bondade}`,
     description:
-      "Bondade como fruto do Espírito: disposição em fazer o bem e agir com generosidade.",
-    color: "#f34a8e, #e86d87, #f34a8e",
+      "Bondade como fruto do Espírito: refere-se à qualidade de ser amável, compassivo e gentil em relação aos outros, refletindo uma disposição positiva e benevolente.",
+    color: "#d21257, #f43280, #d21257",
     messages: [],
   },
   {
