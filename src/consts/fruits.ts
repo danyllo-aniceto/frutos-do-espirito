@@ -10,6 +10,7 @@ import dominioproprio from "../../src/assets/dominioproprio.jfif";
 import { messageAmor } from "./messageAmor";
 import { messageAlegria } from "./messageAlegria";
 import { messagePaz } from "./messagePaz";
+import { messageLonganimidade } from "./messageLonganimidade";
 
 export interface Message {
   id: string;
@@ -64,7 +65,7 @@ const fruits: Fruit[] = [
     description:
       "Longanimidade como fruto do Espírito: paciência perseverante diante das dificuldades e das pessoas difíceis.",
     color: "#007bff, #00bfff, #007bff",
-    messages: [],
+    messages: messageLonganimidade,
   },
   {
     id: "5",
