@@ -11,6 +11,7 @@ import { messageAmor } from "./messageAmor";
 import { messageAlegria } from "./messageAlegria";
 import { messagePaz } from "./messagePaz";
 import { messageLonganimidade } from "./messageLonganimidade";
+import { messageBenignidade } from "./messageBenignidade";
 
 export interface Message {
   id: string;
@@ -74,7 +75,7 @@ const fruits: Fruit[] = [
     description:
       "Benignidade como fruto do Espírito: enfatiza a disposição de promover o bem e a paz, muitas vezes manifestada através de atos de generosidade e misericórdia.",
     color: "#26923a, #1dbe36, #26923a",
-    messages: [],
+    messages: messageBenignidade,
   },
   {
     id: "6",
