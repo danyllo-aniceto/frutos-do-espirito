@@ -1,8 +1,8 @@
 import amor from "../../src/assets/amor.jfif";
 import alegria from "../../src/assets/alegria.jfif";
 import paz from "../../src/assets/paz.jfif";
-import longanimidade from "../../src/assets/lonaganimidade.jfif";
-import benignidade from "../../src/assets/benignidade.jfif";
+import longanimidade from "../../src/assets/longanimidade.jfif";
+import benignidade from "../../src/assets/benignidad.jfif";
 import bondade from "../../src/assets/bondade.jfif";
 import fidelidade from "../../src/assets/fidelidade.jfif";
 import mansidao from "../../src/assets/mansidao.jfif";
@@ -12,6 +12,7 @@ import { messageAlegria } from "./messageAlegria";
 import { messagePaz } from "./messagePaz";
 import { messageLonganimidade } from "./messageLonganimidade";
 import { messageBenignidade } from "./messageBenignidade";
+import { messageBondade } from "./messageBondade";
 
 export interface Message {
   id: string;
@@ -84,7 +85,7 @@ const fruits: Fruit[] = [
     description:
       "Bondade como fruto do Espírito: refere-se à qualidade de ser amável, compassivo e gentil em relação aos outros, refletindo uma disposição positiva e benevolente.",
     color: "#d21257, #f43280, #d21257",
-    messages: [],
+    messages: messageBondade,
   },
   {
     id: "7",

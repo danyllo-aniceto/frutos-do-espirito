@@ -1,0 +1,32 @@
+export const messageBondade = [
+  {
+    id: "bo1",
+    author: "Danyllo Aniceto",
+    instagram: "danylloaniceto",
+    title: "O Bom Samaritano",
+    verse: [
+      "'Como desejam que as pessoas façam a vocês, assim façam a elas.'",
+      "(Lucas 6:31)",
+    ],
+    text: [
+      "A bondade é algo que devemos ter para demonstrar o caráter de Cristo que há em nós. Assim como desejamos o nosso próprio bem, devemos desejar o bem para aqueles que necessitam de nossa ajuda. A empatia é essencial; precisamos sentir a dor do outro e acolhê-lo sem pensar em recompensa, mas sim em operar uma ação bondosa. Mesmo que não sejamos recompensados aqui, nosso Deus está ao nosso redor. Ele vê tudo o que fazemos e conhece as mais profundas intenções do nosso coração. Se for da aprovação Dele, seremos recompensados por toda boa obra. Que essas boas obras glorifiquem o nome de Jesus, tornando-o cada vez mais conhecido entre as pessoas.",
+      "A seguir, vamos ler a parábola do Bom Samaritano encontrada na passagem de Lucas 10: 25-37, na qual está baseada toda esta mensagem:",
+      "Certa ocasião, um perito na lei levantou-se para pôr Jesus à prova e lhe perguntou:",
+      "― Mestre, que farei para herdar a vida eterna?",
+      "― O que está escrito na lei? — respondeu Jesus. — Como você a interpreta?",
+      "Ele respondeu: ― 'Ame ao Senhor, o seu Deus, com todo o seu coração, com toda a sua alma, com todas as suas forças e com todo o seu entendimento' e 'Ame ao seu próximo como a você mesmo.'",
+      "Jesus disse: ― Você respondeu corretamente. Faça isso e viverá.",
+      "Ele, porém, querendo justificar-se, perguntou a Jesus: ― Quem é o meu próximo?",
+      "Em resposta, Jesus disse: ― Um homem descia de Jerusalém para Jericó, quando caiu nas mãos de assaltantes. Estes lhe tiraram as roupas, espancaram-no e se foram, deixando-o quase morto. Coincidentemente, um sacerdote descia por aquela estrada e, tendo visto o homem, passou pelo outro lado. De igual modo, um levita, quando chegou ao lugar e o viu, passou pelo outro lado. Mas um samaritano, estando de viagem, chegou onde se encontrava o homem e, quando o viu, teve piedade dele. Ele se aproximou e lhe enfaixou as feridas, depois de derramar vinho e óleo nelas. Então, colocou-o sobre o seu próprio animal, levou-o para uma hospedaria e cuidou dele. No dia seguinte, deu dois denários ao hospedeiro e lhe disse: 'Cuide dele. Quando eu voltar, pagarei todas as despesas que você tiver a mais.'",
+      "― Qual destes três você acha que foi o próximo do homem que caiu nas mãos dos assaltantes?",
+      "― Aquele que teve misericórdia dele — respondeu o perito na lei.",
+      "Jesus lhe disse: ― Vá e faça o mesmo.",
+      "Esta parábola nos ensina muito sobre como colocar os mandamentos de Deus em prática. Se analisarmos as duas primeiras pessoas que passaram pelo homem assaltado, o sacerdote e o levita, veremos que eles tinham um status de seguidores da Palavra, mas sua atitude de omissão os fez pecar. Mesmo que eles não fizeram nenhum mal ao homem, deixaram de fazer um bem para ele, e Deus não se agrada disso. Por isso, é sempre importante estarmos bem instruídos na Palavra para não cometer esses erros. Deus é bondoso para todos, e assim devemos ser nós, operando bondade para todos, mesmo que não conheçamos a pessoa.",
+      "'Quando estiver ao seu alcance, não deixe de fazer o bem a quem é devido.' - Provérbios 3:27",
+      "'Portanto, pensem nisto: quem sabe que deve fazer o bem e não o faz, comete pecado.' - Tiago 4:17",
+      "O samaritano demonstrou como devemos ser. Sua atitude foi nobre ao acolher o homem, tratar suas feridas, levá-lo à hospedaria e arcar com todas as despesas, mesmo não conhecendo aquele homem. Ele não permitiu que algo pior acontecesse. Quem sabe o que poderia ter acontecido se ele não tivesse acolhido o homem? Ele poderia até mesmo morrer. A boa ação exercida impede que um mal futuro aconteça. O samaritano poderia simplesmente continuar sua caminhada, mas seu caráter o fez parar. Isso pode ter feito ele perder tempo, gastar suas forças e dinheiro, mas a vida tem muito mais valor do que qualquer bem. Isso, de fato, é amar o próximo: deixar de lado qualquer coisa que nos apegamos para ajudar alguém, estar em plena renúncia das nossas vontades para realizar o que Deus nos ordenou a fazer, e assim amamos verdadeiramente a Palavra de Deus.",
+      "Então, deixemos todas as coisas que nos impedem de ajudar, agir e dar total apoio ao nosso próximo. Nosso coração deve ser bondoso a ponto de renunciar nosso tempo, dinheiro e qualquer bem material. Essas coisas não podem impedir de fazer obras que glorifiquem Jesus Cristo. Não podemos colocar nossas próprias vontades acima da vontade do Pai, pois isso seria deixá-lo em segundo plano. Sendo nós seguidores de Cristo, devemos seguir o que Ele nos ordena: amar a Deus em primeiro lugar. Agir com bondade quando se ama a Deus e ao próximo não será um peso; pelo contrário, será uma grande honra e prazer, pois quando fazemos essas coisas, estamos cumprindo o ideal de Deus, e isso é motivo de alegria e paz.",
+      "'Da mesma forma, brilhe a luz de vocês diante dos homens, para que vejam as suas boas obras e glorifiquem a seu Pai, que está nos céus.' - Mateus 5:16",
+    ],
+  },
+];
