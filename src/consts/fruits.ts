@@ -14,6 +14,7 @@ import { messageLonganimidade } from "./messageLonganimidade";
 import { messageBenignidade } from "./messageBenignidade";
 import { messageBondade } from "./messageBondade";
 import { messageFidelidade } from "./messageFidelidade";
+import { messageMansidao } from "./messageMansidao";
 
 export interface Message {
   id: string;
@@ -104,7 +105,7 @@ const fruits: Fruit[] = [
     description:
       "Mansidão como fruto do Espírito: suavidade, humildade e controle sobre a própria força.",
     color: "#15af98, #37ebd0, #15af98",
-    messages: [],
+    messages: messageMansidao,
   },
   {
     id: "9",
