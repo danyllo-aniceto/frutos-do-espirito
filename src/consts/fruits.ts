@@ -3,7 +3,7 @@ import alegria from "../../src/assets/alegria.jfif";
 import paz from "../../src/assets/paz.jfif";
 import longanimidade from "../../src/assets/longanimidade.jfif";
 import benignidade from "../../src/assets/benignidad.jfif";
-import bondade from "../../src/assets/bondade.jfif";
+import bondade from "../../src/assets/bondade3.jfif";
 import fidelidade from "../../src/assets/fidelidade.jfif";
 import mansidao from "../../src/assets/mansidao.jfif";
 import dominioproprio from "../../src/assets/dominioproprio.jfif";
@@ -13,6 +13,7 @@ import { messagePaz } from "./messagePaz";
 import { messageLonganimidade } from "./messageLonganimidade";
 import { messageBenignidade } from "./messageBenignidade";
 import { messageBondade } from "./messageBondade";
+import { messageFidelidade } from "./messageFidelidade";
 
 export interface Message {
   id: string;
@@ -93,8 +94,8 @@ const fruits: Fruit[] = [
     image: `${fidelidade}`,
     description:
       "Fidelidade como fruto do Espírito: lealdade e constância em relação a Deus e aos outros.",
-    color: "#f17414, #ff8500, #f17414",
-    messages: [],
+    color: "#c15400, #ff8500, #c15400",
+    messages: messageFidelidade,
   },
   {
     id: "8",
