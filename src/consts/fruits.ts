@@ -15,6 +15,7 @@ import { messageBenignidade } from "./messageBenignidade";
 import { messageBondade } from "./messageBondade";
 import { messageFidelidade } from "./messageFidelidade";
 import { messageMansidao } from "./messageMansidao";
+import { messageDominioProprio } from "./messageDominioProprio";
 
 export interface Message {
   id: string;
@@ -114,7 +115,7 @@ const fruits: Fruit[] = [
     description:
       "Domínio próprio como fruto do Espírito: autocontrole e disciplina sobre desejos e ações.",
     color: "#6a10b5, #833cbe, #6a10b5",
-    messages: [],
+    messages: messageDominioProprio,
   },
 ];
 
