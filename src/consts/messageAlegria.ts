@@ -36,7 +36,7 @@ export const messageAlegria = [
     id: "al2",
     author: "Danyllo Aniceto",
     instagram: "danylloaniceto",
-    title: "Louve na Presença Senhor com Alegria",
+    title: "Louve na Presença do Senhor com Alegria",
     verse: [
       "‘Adorem o SENHOR com alegria e venham cantando até a sua presença.’",
       "(Salmos 100: 2)",
