@@ -7,15 +7,26 @@ import bondade from "../../src/assets/bondade3.jfif";
 import fidelidade from "../../src/assets/fidelidade.jfif";
 import mansidao from "../../src/assets/mansidao.jfif";
 import dominioproprio from "../../src/assets/dominioproprio.jfif";
-import { messageAmor } from "./messageAmor";
-import { messageAlegria } from "./messageAlegria";
-import { messagePaz } from "./messagePaz";
-import { messageLonganimidade } from "./messageLonganimidade";
-import { messageBenignidade } from "./messageBenignidade";
-import { messageBondade } from "./messageBondade";
-import { messageFidelidade } from "./messageFidelidade";
-import { messageMansidao } from "./messageMansidao";
-import { messageDominioProprio } from "./messageDominioProprio";
+import { messageAmor } from "./messages/messageAmor";
+import { messageAlegria } from "./messages/messageAlegria";
+import { messagePaz } from "./messages/messagePaz";
+import { messageLonganimidade } from "./messages/messageLonganimidade";
+import { messageBenignidade } from "./messages/messageBenignidade";
+import { messageBondade } from "./messages/messageBondade";
+import { messageFidelidade } from "./messages/messageFidelidade";
+import { messageMansidao } from "./messages/messageMansidao";
+import { messageDominioProprio } from "./messages/messageDominioProprio";
+
+export interface Keyword {
+  id: string;
+  name: string;
+  type: "good" | "bad";
+}
+
+export interface Situation {
+  id: string;
+  text: string | string[];
+}
 
 export interface Message {
   id: string;
@@ -32,7 +43,9 @@ export interface Fruit {
   image: string;
   color: string;
   description: string;
-  messages: Message[]; // Garantindo que 'messages' seja sempre um array
+  messages: Message[];
+  keyword?: Keyword[];
+  situation?: Situation[];
 }
 
 const fruits: Fruit[] = [
