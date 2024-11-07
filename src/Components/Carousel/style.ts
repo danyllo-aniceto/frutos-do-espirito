@@ -18,10 +18,11 @@ export const CarouselContainer = styled.div`
 
   .slick-dots li button:before {
     font-size: 12px;
+    color: #fff;
   }
 
   .slick-dots li.slick-active button:before {
-    color: #000;
+    color: #fff;
   }
 
   @media (max-width: 720px) {
