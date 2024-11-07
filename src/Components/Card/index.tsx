@@ -6,14 +6,7 @@ export function Card({ description, color, image, name }: ICardProps) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/fruit-content", {
-      state: {
-        description,
-        color,
-        image,
-        name,
-      },
-    });
+    navigate("/");
   };
   return (
     <CardContainer color={color} onClick={handleClick}>
