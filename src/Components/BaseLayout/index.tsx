@@ -2,6 +2,9 @@ import {
   CloseButton,
   Container,
   Divider,
+  Footer,
+  FooterContent,
+  FooterText,
   Header,
   Logo,
   LogoAndTitle,
@@ -10,6 +13,7 @@ import {
   MenuButton,
   SideMenu,
   SideMenuItem,
+  SocialIcons,
   Title,
 } from "./styles";
 import { IBaseLayoutProps } from "./types";
@@ -17,6 +21,7 @@ import logo from "../../assets/_e67ee415-41ed-419b-9e26-b13fadcbf287-removebg-pr
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import fruits from "../../consts/fruits";
+import { FaInstagram, FaTiktok, FaExternalLinkAlt } from "react-icons/fa";
 
 export function BaseLayout({ children }: IBaseLayoutProps) {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -63,6 +68,38 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
         </Menu>
       </SideMenu>
       <Main>{children}</Main>
+      <Divider />
+      <Footer>
+        <FooterContent>
+          <p>Conheça também:</p>
+          <a
+            href="https://personagens-biblicos.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Adivinhe o nome dos personagens bíblicos <FaExternalLinkAlt />
+          </a>
+        </FooterContent>
+        <FooterText>
+          &copy; {new Date().getFullYear()} Todos os direitos reservados.
+        </FooterText>
+        <SocialIcons>
+          <a
+            href="https://instagram.com/danylloaniceto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaInstagram />
+          </a>
+          <a
+            href="https://tiktok.com/@_danyllo"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <FaTiktok />
+          </a>
+        </SocialIcons>
+      </Footer>
     </Container>
   );
 }

@@ -178,3 +178,70 @@ export const Divider = styled.div`
   border-bottom: 2.5px solid #fcfcfe;
   width: 100%;
 `;
+
+export const Footer = styled.footer`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+  align-items: center;
+
+  @media (max-width: 630px) {
+    flex-direction: column;
+  }
+`;
+
+export const FooterContent = styled.div`
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  font-family: "Roboto Condensed", sans-serif;
+  color: #fff;
+  gap: 8px;
+
+  @media (max-width: 750px) {
+    flex-direction: column;
+  }
+  @media (max-width: 630px) {
+    flex-direction: row;
+  }
+  @media (max-width: 460px) {
+    flex-direction: column;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-family: "Roboto Condensed", sans-serif;
+    color: ;
+
+    &:hover {
+      color: #619ae8;
+    }
+  }
+`;
+
+export const SocialIcons = styled.div`
+  display: flex;
+  gap: 15px;
+  margin: 10px 0;
+
+  a {
+    color: #fff;
+    font-size: 1.5rem;
+
+    &:hover {
+      color: #619ae8;
+    }
+  }
+`;
+
+export const FooterText = styled.p`
+  font-size: 0.9rem;
+  color: #fff;
+  font-family: "Roboto Condensed", sans-serif;
+`;
