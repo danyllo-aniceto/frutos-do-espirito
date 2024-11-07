@@ -24,4 +24,18 @@ export const messageMansidao = [
       "Que possamos ser diferentes do irmão do filho pródigo; sejamos como o pai dele, que não se revoltou quando o filho voltou para casa. Pelo contrário, demonstrou ser manso ao perdoá-lo e se alegrar com sua volta. A festa foi grandiosa, pois o que estava morto agora vive. A ira só nos leva a agir sem pensar. Entreguemos tudo ao Senhor, confiemos Nele, e que, nessa confiança, possamos desenvolver a mansidão, assim agradando aquele que nos salvou, sendo o nosso espírito o grande vencedor dessa batalha.",
     ],
   },
+  {
+    id: "ma2",
+    author: "Caio Henrique",
+    instagram: "caio_fw7",
+    title: "Ser Manso",
+    verse: [
+      "'O homem irado provoca brigas, e o de gênio violento comete muitos pecados'",
+      "(Provérbios 29: 22)",
+    ],
+    text: [
+      "Ser manso não é ser fraco, pelo contrário, é ter domínio sobre as suas forças. Os mansos mantem a calma em meio as adiversidades, pois confiam que tudo está sob o controle de Deus e que nada sai do seu propósito.",
+      "Quem tem um Deus tão poderoso e amoroso, não tem motivos para ficar irado ou falar palavras violentas.",
+    ],
+  },
 ];
