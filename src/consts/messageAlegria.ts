@@ -54,4 +54,18 @@ export const messageAlegria = [
       "Pois só há verdadeira alegria onde a presença do Senhor permanece. Que possamos aprender com a história do filho pródigo, que quando ele perdeu tudo lá fora no mundo, percebeu que era melhor ter permanecido junto ao pai, onde ele era bem cuidado e tratado com amor, e não com interesse. Então, não desista do caminho do Senhor e continue louvando e se alegrando na presença Dele. Não se envergonhe, tenha fervor e seja exemplo para que outros também glorifiquem a Deus. Que possamos sempre dançar em Sua presença sem medo dos olhares de outros, pois Aquele que nos observa se agrada de nossa alegria a Ele. Aleluia! Todo louvor seja dado a Jesus Cristo!",
     ],
   },
+  {
+    id: "al3",
+    author: "Caio Henrique",
+    instagram: "caio_fw7",
+    title: "Alegria No Senhor",
+    verse: [
+      "‘Tenho lhes dito estas palavras para que a minha alegria esteja em vocês e a alegria de vocês seja completa.’",
+      "(João 15: 11)",
+    ],
+    text: [
+      "Confiar em Deus e crer na sua palavra nos trás uma alegria profunda que nos da perseverança e resistência em qualquer situação. Essa alegria nos motiva a enfrentar qualquer desafio com coragem e esperança.",
+      "Embora todos possam experimentar a alegria momentânea, somente a alegria que vem do Espírito Santo é duradoura.",
+    ],
+  },
 ];
