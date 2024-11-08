@@ -1,4 +1,6 @@
-export const keywordDominioProprio = [
+import { Keyword } from "../types";
+
+export const keywordDominioProprio: Keyword[] = [
   {
     id: "k-dp1",
     name: "Autocontrole",

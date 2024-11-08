@@ -1,4 +1,6 @@
-export const keywordBenignidade = [
+import { Keyword } from "../types";
+
+export const keywordBenignidade: Keyword[] = [
   {
     id: "k-be1",
     name: "Gentileza",
