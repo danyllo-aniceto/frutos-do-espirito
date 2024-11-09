@@ -7,7 +7,7 @@ import { H2 } from "../FruitCard";
 
 interface KeywordCardProps {
   keyword: Keyword | null;
-  fruitColor: string;
+  fruitColor: string | undefined;
   onDraw: () => void;
   disabled: boolean;
 }
