@@ -7,6 +7,7 @@ import { StyledLink } from "../FruitContent/style";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { Carousel } from "../../Components/Carousel";
+import { CardGame } from "../../Components/CardGame";
 
 export function Dashboard() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
@@ -43,6 +44,9 @@ export function Dashboard() {
           ))}
         </CardContainer>
       )}
+      <StyledLink to={"/whatif"}>
+        <CardGame />
+      </StyledLink>
     </BaseLayout>
   );
 }

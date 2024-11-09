@@ -1,4 +1,4 @@
-import { Message } from "../../consts/fruits";
+import { Message } from "../../consts/types";
 
 export interface ICardProps {
   id: string;

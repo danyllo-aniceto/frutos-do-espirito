@@ -3,6 +3,7 @@ import { Dashboard } from "./pages/Dashboard";
 import { FruitContent } from "./pages/FruitContent";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Message } from "./pages/Message";
+import { WhatIf } from "./pages/WhatIf";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
             path="/fruit/:fruitId/message/:messageId"
             element={<Message />}
           />
+          <Route path="/whatif" element={<WhatIf />} />
         </Routes>
       </Router>
       <GlobalStyle />

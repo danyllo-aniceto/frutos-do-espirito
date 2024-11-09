@@ -43,6 +43,12 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
     window.scrollTo(0, 0); // Scroll to top when navigating
   };
 
+  const handleWhatIfNavigation = () => {
+    toggleMenu();
+    navigate("/whatif");
+    window.scrollTo(0, 0); // Scroll to top when navigating
+  };
+
   return (
     <Container>
       <Header>
@@ -65,6 +71,9 @@ export function BaseLayout({ children }: IBaseLayoutProps) {
               {fruit.name}
             </SideMenuItem>
           ))}
+          <SideMenuItem onClick={handleWhatIfNavigation}>
+            O Que Aconteceria Se?!
+          </SideMenuItem>
         </Menu>
       </SideMenu>
       <Main>{children}</Main>

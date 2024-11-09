@@ -134,6 +134,7 @@ export const BackButton = styled.button<{ color?: string }>`
 `;
 
 export const StyledLink = styled(RouterLink)`
-  text-decoration: none; /* Remove o sublinhado */
-  color: inherit; /* Mantém a cor padrão do texto */
+  text-decoration: none;
+  color: inherit;
+  align-self: center;
 `;
