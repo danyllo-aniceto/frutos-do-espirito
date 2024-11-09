@@ -84,7 +84,7 @@ const CardContainer = styled.div<{ color: string | undefined }>`
     align-self: center;
   }
 `;
-const Button = styled.button<{ color: string | undefined }>`
+export const Button = styled.button<{ color: string | undefined }>`
   width: 500px;
   align-self: center;
   padding: 10px 20px;
@@ -139,7 +139,7 @@ const Image = styled.img`
   border-radius: 100px;
 `;
 
-const H2 = styled.h2`
+export const H2 = styled.h2`
   font-family: "Poetsen One", sans-serif;
   font-size: 26px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
@@ -166,7 +166,7 @@ const Content = styled.div`
   }
 `;
 
-const ContentFruit = styled.div`
+export const ContentFruit = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
