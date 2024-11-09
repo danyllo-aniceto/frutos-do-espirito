@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { continuousDiagonalGradientAnimation } from "../../../../Components/CardGame/styles";
 
-export const CardContainer = styled.div<{ color: string; disabled: boolean }>`
+export const CardContainer = styled.div<{
+  color: string | undefined;
+  disabled: boolean;
+}>`
   display: flex;
   flex-direction: column;
   justify-content: center;

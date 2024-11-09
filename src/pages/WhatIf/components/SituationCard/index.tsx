@@ -7,7 +7,7 @@ import { Text } from "./styles";
 
 interface SituationCardProps {
   situation: Situation | null;
-  fruitColor: string;
+  fruitColor: string | undefined;
   onDraw: () => void;
   disabled: boolean;
 }
