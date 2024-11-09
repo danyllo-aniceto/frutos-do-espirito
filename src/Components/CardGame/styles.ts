@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-const continuousDiagonalGradientAnimation = keyframes`
+export const continuousDiagonalGradientAnimation = keyframes`
   0% {
     background-position: 0% 0%;
   }

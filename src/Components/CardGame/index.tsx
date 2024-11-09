@@ -6,7 +6,7 @@ import {
   Description,
 } from "./styles";
 
-import questionMark from "./../../assets/question-mark4.png";
+import questionMark from "./../../assets/questiong3.gif";
 
 export function CardGame() {
   return (

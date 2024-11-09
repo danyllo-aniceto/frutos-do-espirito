@@ -169,3 +169,15 @@ export const ContentWeb = styled.div`
   justify-content: space-around;
   align-items: center;
 `;
+
+export const Cards = styled.div`
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    gap: 16px;
+  }
+`;

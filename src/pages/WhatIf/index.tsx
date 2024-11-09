@@ -1,5 +1,6 @@
 import { BaseLayout } from "../../Components/BaseLayout";
 import {
+  Cards,
   Container,
   ContainerWeb,
   Content,
@@ -13,22 +14,63 @@ import {
   Title,
 } from "./styles";
 
-import questionMark from "./../../assets/question-mark4.png";
+import questionMark from "./../../assets/questiong3.gif";
 import { useEffect, useState } from "react";
 import { BackButton } from "../FruitContent/style";
 import { FiArrowLeft } from "react-icons/fi";
 import { useNavigate } from "react-router-dom";
 import { TutorialModal } from "../../Components/ModalTutorial";
+import fruits from "../../consts/fruits";
+import { FruitCard } from "./components/FruitCard";
+import { KeywordCard } from "./components/KeywordCard";
+import { SituationCard } from "./components/SituationCard";
+import { Fruit, Keyword, Situation } from "../../consts/types";
 
 export function WhatIf() {
   const navigate = useNavigate();
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
+
+  const [selectedFruit, setSelectedFruit] = useState<Fruit | null>(null);
+  const [selectedKeyword, setSelectedKeyword] = useState<Keyword | null>(null);
+  const [selectedSituation, setSelectedSituation] = useState<Situation | null>(
+    null
+  );
+
+  const handleFruitDraw = () => {
+    const randomFruit = fruits[Math.floor(Math.random() * fruits.length)];
+    setSelectedFruit(randomFruit);
+    setSelectedKeyword(null);
+    setSelectedSituation(null);
+  };
+
+  const handleKeywordDraw = () => {
+    if (selectedFruit && selectedFruit.keywords) {
+      const randomKeyword =
+        selectedFruit.keywords[
+          Math.floor(Math.random() * selectedFruit.keywords.length)
+        ];
+      setSelectedKeyword(randomKeyword);
+    }
+  };
+
+  const handleSituationDraw = () => {
+    if (selectedFruit && selectedFruit.situations) {
+      const randomSituation =
+        selectedFruit.situations[
+          Math.floor(Math.random() * selectedFruit.situations.length)
+        ];
+      setSelectedSituation(randomSituation);
+    }
+  };
+
   useEffect(() => {
+    window.scrollTo(0, 0);
     const handleResize = () => setIsMobile(window.innerWidth <= 750);
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
   return (
     <BaseLayout>
       <BackButton onClick={() => navigate("/")}>
@@ -86,6 +128,26 @@ export function WhatIf() {
           )}
         </Content>
       </Container>
+      <Cards>
+        {/* Fruit Card - Step 1 */}
+        <FruitCard fruit={selectedFruit} onDraw={handleFruitDraw} />
+
+        {/* Keyword Card - Step 2, enabled after selecting a fruit */}
+        <KeywordCard
+          keyword={selectedKeyword}
+          fruitColor={selectedFruit?.color}
+          onDraw={handleKeywordDraw}
+          disabled={!selectedFruit}
+        />
+
+        {/* Situation Card - Step 3, enabled after selecting a keyword */}
+        <SituationCard
+          situation={selectedSituation}
+          fruitColor={selectedFruit?.color}
+          onDraw={handleSituationDraw}
+          disabled={!selectedKeyword}
+        />
+      </Cards>
     </BaseLayout>
   );
 }
