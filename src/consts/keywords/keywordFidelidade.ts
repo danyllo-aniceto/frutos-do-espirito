@@ -82,11 +82,6 @@ export const keywordFidelidade: Keyword[] = [
     type: "bad",
   },
   {
-    id: "k-fi17",
-    name: "Fidelidade",
-    type: "good",
-  },
-  {
     id: "k-fi18",
     name: "Aliança",
     type: "good",
@@ -149,16 +144,6 @@ export const keywordFidelidade: Keyword[] = [
   {
     id: "k-fi30",
     name: "Honra",
-    type: "good",
-  },
-  {
-    id: "k-fi31",
-    name: "Pacto",
-    type: "good",
-  },
-  {
-    id: "k-fi32",
-    name: "Certeza",
     type: "good",
   },
 ];

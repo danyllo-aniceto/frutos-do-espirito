@@ -92,18 +92,8 @@ export const keywordBondade: Keyword[] = [
     type: "good",
   },
   {
-    id: "k-bo19",
-    name: "Amor",
-    type: "good",
-  },
-  {
     id: "k-bo20",
     name: "Compaixão",
-    type: "good",
-  },
-  {
-    id: "k-bo21",
-    name: "Bondade",
     type: "good",
   },
   {
@@ -115,11 +105,6 @@ export const keywordBondade: Keyword[] = [
     id: "k-bo23",
     name: "Arrogância",
     type: "bad",
-  },
-  {
-    id: "k-bo24",
-    name: "Amabilidade",
-    type: "good",
   },
   {
     id: "k-bo25",
@@ -160,5 +145,10 @@ export const keywordBondade: Keyword[] = [
     id: "k-bo32",
     name: "Compreensão",
     type: "good",
+  },
+  {
+    id: "k-bo330",
+    name: "Violência",
+    type: "bad",
   },
 ];

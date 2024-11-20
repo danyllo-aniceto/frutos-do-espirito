@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 const gradientAnimation = keyframes`
   0% {
@@ -101,14 +101,14 @@ export const ContentTextImage = styled.div`
   flex-direction: row;
 `;
 
-export const OpenModalButton = styled.button`
+export const OpenModalButton = styled.button<{ disabled?: boolean }>`
   width: 500px;
   align-self: center;
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 1rem;
   border: none;
-  background-color: #fff;
+  background-color: ${({ disabled }) => (disabled ? "#d3d3d38a" : "#fff")};
   color: #2c3e50;
   border-radius: 5px;
   cursor: pointer;
@@ -125,25 +125,28 @@ export const OpenModalButton = styled.button`
     width: 200px;
   }
 
-  &:hover {
-    background: linear-gradient(
-      -80deg,
-      #d91115,
-      #f8c70b,
-      #b0b0b0,
-      #00bfff,
-      #1dbe37,
-      #f43280,
-      #ff8500,
-      #37ebd0,
-      #833cbe
-    );
-    background-size: 200% 200%;
-    animation: gradientAnimation 3s ease infinite;
-    color: #fff;
-    transform: scale(1.05);
-  }
-
+  ${({ disabled }) =>
+    !disabled &&
+    css`
+      &:hover {
+        background: linear-gradient(
+          -80deg,
+          #d91115,
+          #f8c70b,
+          #b0b0b0,
+          #00bfff,
+          #1dbe37,
+          #f43280,
+          #ff8500,
+          #37ebd0,
+          #833cbe
+        );
+        background-size: 200% 200%;
+        animation: ${gradientAnimation} 3s ease infinite;
+        color: #fff;
+        transform: scale(1.05);
+      }
+    `}
   @keyframes gradientAnimation {
     0% {
       background-position: 0% 50%;

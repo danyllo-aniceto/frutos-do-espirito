@@ -132,11 +132,6 @@ export const keywordBenignidade: Keyword[] = [
     type: "bad",
   },
   {
-    id: "k-be27",
-    name: "Bondade",
-    type: "good",
-  },
-  {
     id: "k-be28",
     name: "Comiseração",
     type: "good",
@@ -152,13 +147,13 @@ export const keywordBenignidade: Keyword[] = [
     type: "good",
   },
   {
-    id: "k-be31",
-    name: "Amabilidade",
+    id: "k-be32",
+    name: "Entendimento",
     type: "good",
   },
   {
-    id: "k-be32",
-    name: "Entendimento",
+    id: "hospitalidade",
+    name: "Hospitalidade",
     type: "good",
   },
 ];

@@ -82,16 +82,6 @@ export const keywordAlegria: Keyword[] = [
     type: "bad",
   },
   {
-    id: "k-al17",
-    name: "Alegria",
-    type: "good",
-  },
-  {
-    id: "k-al18",
-    name: "Paz",
-    type: "good",
-  },
-  {
     id: "k-al19",
     name: "Generosidade",
     type: "good",

@@ -47,16 +47,6 @@ export const keywordLonganimidade: Keyword[] = [
     type: "good",
   },
   {
-    id: "k-lo10",
-    name: "Bondade",
-    type: "good",
-  },
-  {
-    id: "k-lo11",
-    name: "Mansidão",
-    type: "good",
-  },
-  {
     id: "k-lo12",
     name: "Longevidade",
     type: "good",

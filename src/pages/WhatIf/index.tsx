@@ -25,9 +25,11 @@ import { FruitCard } from "./components/FruitCard";
 import { KeywordCard } from "./components/KeywordCard";
 import { SituationCard } from "./components/SituationCard";
 import { Fruit, Keyword, Situation } from "../../consts/types";
+import { ModalCreateText } from "../../Components/ModalCreateText";
 
 export function WhatIf() {
   const navigate = useNavigate();
+  const [isModalCreateTextOpen, setIsModalCreateTextOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 750);
 
@@ -129,18 +131,13 @@ export function WhatIf() {
         </Content>
       </Container>
       <Cards>
-        {/* Fruit Card - Step 1 */}
         <FruitCard fruit={selectedFruit} onDraw={handleFruitDraw} />
-
-        {/* Keyword Card - Step 2, enabled after selecting a fruit */}
         <KeywordCard
           keyword={selectedKeyword}
           fruitColor={selectedFruit?.color}
           onDraw={handleKeywordDraw}
           disabled={!selectedFruit}
         />
-
-        {/* Situation Card - Step 3, enabled after selecting a keyword */}
         <SituationCard
           situation={selectedSituation}
           fruitColor={selectedFruit?.color}
@@ -148,6 +145,16 @@ export function WhatIf() {
           disabled={!selectedKeyword}
         />
       </Cards>
+      <OpenModalButton
+        onClick={() => setIsModalCreateTextOpen(true)}
+        disabled={!selectedSituation}
+      >
+        Escrever Situação
+      </OpenModalButton>
+      <ModalCreateText
+        isOpen={isModalCreateTextOpen}
+        onClose={() => setIsModalCreateTextOpen(false)}
+      />
     </BaseLayout>
   );
 }

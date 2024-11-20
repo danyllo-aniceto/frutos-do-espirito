@@ -37,18 +37,8 @@ export const keywordPaz: Keyword[] = [
     type: "good",
   },
   {
-    id: "k-pa8",
-    name: "Amor",
-    type: "good",
-  },
-  {
     id: "k-pa9",
     name: "Tolerância",
-    type: "good",
-  },
-  {
-    id: "k-pa10",
-    name: "Amabilidade",
     type: "good",
   },
   {

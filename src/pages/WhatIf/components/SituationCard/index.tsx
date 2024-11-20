@@ -19,7 +19,7 @@ export const SituationCard: React.FC<SituationCardProps> = ({
   disabled,
 }) => (
   <CardContainer color={fruitColor} disabled={disabled}>
-    {situation ? <Text>{situation.text}</Text> : <H2>Sortear Situação</H2>}
+    {situation ? <Text>{situation.text}</Text> : <H2>Situação</H2>}
     <Button color={fruitColor} onClick={onDraw} disabled={disabled}>
       Sortear Situação
     </Button>
