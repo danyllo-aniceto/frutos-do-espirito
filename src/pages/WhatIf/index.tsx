@@ -154,6 +154,9 @@ export function WhatIf() {
       <ModalCreateText
         isOpen={isModalCreateTextOpen}
         onClose={() => setIsModalCreateTextOpen(false)}
+        fruit={selectedFruit}
+        keyword={selectedKeyword}
+        situation={selectedSituation}
       />
     </BaseLayout>
   );

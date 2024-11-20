@@ -3,23 +3,35 @@ import React, { MouseEvent, useRef, useState } from "react";
 import {
   CloseButton,
   ContainerPrint,
+  ContentFruit,
   ContentPrint,
+  ContentText,
+  FruitImage,
+  Name,
   ModalContainer,
   Overlay,
+  Text,
   TextArea,
   Title,
 } from "./styles";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
+import { Fruit, Keyword, Situation } from "../../consts/types";
 
 interface TutorialModalProps {
   isOpen: boolean;
   onClose: () => void;
+  fruit: Fruit | null;
+  keyword: Keyword | null;
+  situation: Situation | null;
 }
 
 export const ModalCreateText: React.FC<TutorialModalProps> = ({
   isOpen,
   onClose,
+  fruit,
+  keyword,
+  situation,
 }) => {
   if (!isOpen) return null;
 
@@ -56,18 +68,38 @@ export const ModalCreateText: React.FC<TutorialModalProps> = ({
     }
   };
 
-  // Evitar que o clique dentro do modal feche o modal acidentalmente
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const textAreaRef = useRef<HTMLTextAreaElement>(null);
+  const handleInput = () => {
+    if (textAreaRef.current) {
+      textAreaRef.current.style.height = "auto";
+      textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
+    }
+  };
+
   const handleModalClick = (e: MouseEvent) => e.stopPropagation();
 
   return (
     <Overlay onClick={onClose}>
       <ModalContainer onClick={handleModalClick}>
         <CloseButton onClick={onClose}>&times;</CloseButton>
-        <ContainerPrint ref={contentRef}>
+        <ContainerPrint ref={contentRef} color={fruit?.color}>
           <ContentPrint>
-            <Title>O que aconteceria se?!</Title>
-            <p>Este é o conteúdo que será exportado como PDF.</p>
+            <ContentFruit>
+              <Title>O QUE ACONTECERIA SE?!</Title>
+              <FruitImage src={fruit?.image} alt={fruit?.name} />
+            </ContentFruit>
+            <ContentText>
+              <Text>De acordo com o fruto do espírito:</Text>
+              <Name>{fruit?.name}</Name>
+              <Text>o texto a seguir deve utilizar a palavra-chave: </Text>
+              <Name>{keyword?.name}</Name>
+              <Text>para desenvolver uma solução a esta situação: </Text>
+              <Text style={{ fontWeight: "bold" }}>"{situation?.text}"</Text>
+            </ContentText>
             <TextArea
+              ref={textAreaRef}
+              onInput={handleInput}
               value={userText}
               onChange={(e) => setUserText(e.target.value)}
               placeholder="Escreva aqui como aplicaria o fruto..."
