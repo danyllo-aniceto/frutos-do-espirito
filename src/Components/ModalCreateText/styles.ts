@@ -179,8 +179,8 @@ export const ContentText = styled.div`
   line-height: 1.5;
   width: 80%;
 
-  @media (max-width: 380px) {
-    width: 90%;
+  @media (max-width: 450px) {
+    width: 95%;
     text-align: start;
   }
 `;
