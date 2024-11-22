@@ -26,6 +26,7 @@ import { KeywordCard } from "./components/KeywordCard";
 import { SituationCard } from "./components/SituationCard";
 import { Fruit, Keyword, Situation } from "../../consts/types";
 import { ModalCreateText } from "../../Components/ModalCreateText";
+import { Button } from "./components/KeywordCard/styles";
 
 export function WhatIf() {
   const navigate = useNavigate();
@@ -145,12 +146,14 @@ export function WhatIf() {
           disabled={!selectedKeyword}
         />
       </Cards>
-      <OpenModalButton
+      <Button
+        color={selectedFruit?.color}
         onClick={() => setIsModalCreateTextOpen(true)}
         disabled={!selectedSituation}
+        style={{marginTop: '20px', width: '300px'}}
       >
         Escrever Situação
-      </OpenModalButton>
+      </Button>
       <ModalCreateText
         isOpen={isModalCreateTextOpen}
         onClose={() => setIsModalCreateTextOpen(false)}
