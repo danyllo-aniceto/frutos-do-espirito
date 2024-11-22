@@ -1,4 +1,3 @@
-// TutorialModal.tsx
 import React, { MouseEvent, useRef, useState } from "react";
 import {
   CloseButton,
@@ -11,12 +10,13 @@ import {
   ModalContainer,
   Overlay,
   Text,
-  TextArea,
   Title,
+  TextArea,
 } from "./styles";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
 import { Fruit, Keyword, Situation } from "../../consts/types";
+import { Button } from "../../pages/WhatIf/components/KeywordCard/styles";
 
 interface TutorialModalProps {
   isOpen: boolean;
@@ -36,9 +36,9 @@ export const ModalCreateText: React.FC<TutorialModalProps> = ({
   if (!isOpen) return null;
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [userText, setUserText] = useState("");
-  // eslint-disable-next-line react-hooks/rules-of-hooks
   const contentRef = useRef<HTMLDivElement>(null);
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const textRef = useRef<HTMLDivElement>(null); // Ref para o conteúdo da div editável
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [downloadFormat, setDownloadFormat] = useState("pdf");
 
@@ -68,15 +68,6 @@ export const ModalCreateText: React.FC<TutorialModalProps> = ({
     }
   };
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const textAreaRef = useRef<HTMLTextAreaElement>(null);
-  const handleInput = () => {
-    if (textAreaRef.current) {
-      textAreaRef.current.style.height = "auto";
-      textAreaRef.current.style.height = `${textAreaRef.current.scrollHeight}px`;
-    }
-  };
-
   const handleModalClick = (e: MouseEvent) => e.stopPropagation();
 
   return (
@@ -97,31 +88,41 @@ export const ModalCreateText: React.FC<TutorialModalProps> = ({
               <Text>para desenvolver uma solução a esta situação: </Text>
               <Text style={{ fontWeight: "bold" }}>"{situation?.text}"</Text>
             </ContentText>
+            {/* Div editável para capturar todo o texto */}
             <TextArea
-              ref={textAreaRef}
-              onInput={handleInput}
-              value={userText}
-              onChange={(e) => setUserText(e.target.value)}
-              placeholder="Escreva aqui como aplicaria o fruto..."
+              ref={textRef}
+              contentEditable
+              onInput={(e) => {
+                const target = e.target as HTMLDivElement;
+                target.style.height = "auto";
+                target.style.height = `${target.scrollHeight}px`;
+              }}
             />
           </ContentPrint>
         </ContainerPrint>
-        <div style={{ marginTop: "20px" }}>
-          <label htmlFor="format-select">Escolha o formato:</label>
+        <div style={{ display: 'flex', justifyContent: 'flex-start', alignItems: 'center', flexDirection: 'column', marginTop: "20px",  marginBottom: "20px", gap: '20px' }}>
+          <div style={{display: 'flex', alignItems: 'center'}}>
+          <Text  style={{fontSize: '20px' }}>Escolha o formato:</Text>
           <select
             id="format-select"
             value={downloadFormat}
             onChange={(e) => setDownloadFormat(e.target.value)}
-            style={{ marginLeft: "10px" }}
+            style={{  height: '40px', marginLeft: '16px' }}
           >
             <option value="pdf">PDF</option>
             <option value="image">Imagem (PNG)</option>
           </select>
-
-          <button onClick={handleDownload} style={{ marginLeft: "20px" }}>
-            Baixar
-          </button>
+          </div>
+          
+        
+        <div>
+        <Button color={fruit?.color} onClick={handleDownload} >
+          Baixar
+          </Button>
         </div>
+          
+        </div>
+        
       </ModalContainer>
     </Overlay>
   );

@@ -1,5 +1,13 @@
-// styles.js
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const continuousDiagonalGradientAnimation = keyframes`
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+`;
 
 export const Overlay = styled.div`
   position: fixed;
@@ -42,11 +50,21 @@ export const CloseButton = styled.button`
   background-color: transparent;
   color: #fff;
   border: none;
-  font-size: 1.5rem;
+  font-size: 2.5rem;
   position: absolute;
-
-  right: 20px;
+  right: 50px;
+  top: 3px;
   cursor: pointer;
+
+  @media (max-width: 750px) {
+    right: 30px;
+  }
+  @media (max-width: 400px) {
+    right: 20px;
+  }
+  @media (max-width: 350px) {
+    right: 10px;
+  }
 `;
 
 export const Title = styled.h1`
@@ -74,6 +92,10 @@ export const ContainerPrint = styled.div<{ color: string | undefined }>`
     ${(props) => props.color || "#23a6d5"},
     ${(props) => props.color || "#23d5ab"}
   );
+  background-size: 400% 400%;
+  transition: transform 0.3s ease-in-out;
+  animation: ${continuousDiagonalGradientAnimation} 60s linear infinite;
+  filter: brightness(0.9);
 `;
 
 export const ContentPrint = styled.div`
@@ -85,7 +107,7 @@ export const ContentPrint = styled.div`
   flex-direction: column;
 `;
 
-export const TextArea = styled.textarea`
+export const TextArea = styled.div`
   width: 95%;
   min-height: 20vh;
   margin: 20px 0;
@@ -94,6 +116,11 @@ export const TextArea = styled.textarea`
   border: 1px solid #ccc;
   resize: none;
   overflow: hidden;
+  overflow-Y: "auto";
+  white-space: "pre-wrap";
+  background-color: white;
+  color: black;
+  font-family: "Roboto Condensed", sans-serif;
 `;
 
 export const ContentFruit = styled.div`
@@ -105,6 +132,10 @@ export const ContentFruit = styled.div`
 
   @media (max-width: 430px) {
     gap: 20px;
+  }
+
+  @media (max-width: 350px) {
+    gap: 10px;
   }
 `;
 
@@ -123,6 +154,10 @@ export const Text = styled.span`
   display: inline;
   font-family: "Roboto Condensed", sans-serif;
   margin-right: 6px;
+
+  @media (max-width: 350px) {
+    font-size: 12px;
+  }
 `;
 
 export const Name = styled.span`
@@ -131,6 +166,10 @@ export const Name = styled.span`
   font-family: "Poetsen One", sans-serif;
   font-size: 20px;
   margin-right: 6px;
+
+  @media (max-width: 350px) {
+    font-size: 16px;
+  }
 `;
 
 export const ContentText = styled.div`
@@ -145,3 +184,4 @@ export const ContentText = styled.div`
     text-align: start;
   }
 `;
+
