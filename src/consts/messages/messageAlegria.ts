@@ -58,4 +58,28 @@ export const messageAlegria = [
       "Embora todos possam experimentar a alegria momentânea, somente a alegria que vem do Espírito Santo é duradoura.",
     ],
   },
+  {
+    id: "al4",
+    author: "Danyllo Aniceto",
+    instagram: "danylloaniceto",
+    title: "É Tudo Sobre Ele!",
+    verse: [
+      "‘É necessário que Ele cresça e que eu diminua.’",
+      "(João 3:30)",
+    ],
+    text: [
+      "Jesus é suficiente. Essa frase deve ser repetida em nossos corações todos os dias. É sempre bom lembrar por que vivemos e para quem vivemos. Neste mundo, é muito fácil nos deixarmos levar por distrações que podem nos afastar do Verdadeiro Caminho e alimentar o nosso próprio ego.",
+      "Quando damos muita atenção às nossas próprias dores, esquecemos a grandeza de Deus. Deus está muito além de qualquer problema. Ele tem poder sobre todas as coisas. Ele criou o tempo e o espaço e não é dominado por eles; pelo contrário, Ele os domina. Ele nos criou como seres de livre arbítrio e sonda os nossos corações, vê nossas intenções e motivações. Ele é capaz de realizar sonhos, nos trazer conquistas, ouvir cada palavra dita pela nossa boca e conhecer cada pensamento que passa em nossa mente. Ele é o único capaz de trazer um julgamento justo, pois nos conhece mais do que nós mesmos.",
+      "'Senhor, tu me sondas e me conheces. Sabes quando me sento e quando me levanto; de longe, percebes os meus pensamentos.' – Salmos 139:1-2",
+      "Se refletirmos, será que conseguimos nos defender diante do julgamento de Deus? Claramente, não. Nossas atitudes estão propensas ao pecado, pois 'todos pecaram e estão destituídos da glória de Deus' (Romanos 3:23). Não somos salvos porque merecemos, mas porque Deus nos amou primeiro e entregou Seu Filho para sofrer em nosso lugar, como descrito pelos profetas. Assim, todo aquele que crê em Jesus e o segue é salvo da condenação eterna.",
+      "'Ele, porém, foi traspassado por causa das nossas transgressões e esmagado por causa das nossas iniquidades; o castigo que nos trouxe a paz estava sobre Ele, e pelas suas feridas fomos curados. Todos nós, como ovelhas, nos desviamos, cada um de nós se voltou para o seu próprio caminho, mas o Senhor fez cair sobre Ele a iniquidade de todos nós.' – Isaías 53:5-6",
+      "Percebe como não merecemos nenhuma atenção? Pelas nossas atitudes, não somos dignos de aplausos, glórias ou exaltação. Não deveríamos nos importar com isso, pois o ser humano não é capaz de suportar tais coisas.",
+      "A coisa mais importante nesta vida é a nossa salvação, e ela não foi conquistada por nossos próprios méritos, mas sim pelo amor de Cristo. É Jesus quem deve ser honrado e glorificado. É para Ele que devemos nos prostrar e humilhar, porque sem Deus somos absolutamente nada. Tenha em mente: tudo o que fizer, não faça por você, mas para Deus. Que a luz de Cristo seja revelada através de sua vida, pois todos necessitamos da presença do Senhor.",
+      "'Vocês são a luz do mundo. Não se pode esconder uma cidade construída sobre um monte. Ninguém acende uma lâmpada e a coloca debaixo de uma vasilha. Ao contrário, coloca-a no lugar apropriado, e assim ilumina todos os que estão na casa. Da mesma forma, brilhe a luz de vocês diante dos homens, para que vejam as suas boas obras e glorifiquem a seu Pai, que está nos céus'– Mateus 5:14-16",
+      "Tudo o que fizermos deve ser feito de coração, pensando em Cristo e carregando conosco a Palavra de Deus. Permita que Ele te corrija e te molde, para que Ele seja glorificado. Não deixe a teimosia afastá-lo da correção, pois ela é necessária. As provações moldam nosso caráter, transformam-nos em novas criaturas que andam na contramão do mundo, abandonando orgulho, ódio, inveja, ira e outras coisas que nos levam ao pecado.",
+      "João Batista entendeu muito bem o que é honrar e levar toda glória a Cristo. Ele falava com alegria sobre quem era Jesus, enfatizando que Ele veio para nos salvar. Na passagem de João 3:22-30, João compara-se ao amigo do noivo, que se alegra ao ouvir a voz do noivo. Ele se alegrava completamente com o que Jesus fez: nos amar de forma incondicional.",
+      "Precisamos entender o quanto somos amados e nos alegrar com isso. Devemos ser mais agradecidos por todas as bênçãos ao nosso redor e nos alegrar ao ponto de não nos importarmos com o que os outros pensam sobre nós, mas sim com o que eles veem de Cristo em nossas vidas.",
+      "Mantenha-se alegre e satisfeito. Leve a luz de Jesus para os outros. Encare o mundo para que todos vejam o quão perfeito Ele é e reconheçam os grandes feitos do Pai. Recorde que Jesus venceu a morte, ressuscitou, está vivo e ainda há uma promessa: Ele buscará aqueles que depositaram sua fé e viveram uma vida dedicada a Ele."
+    ],
+  },
 ];
