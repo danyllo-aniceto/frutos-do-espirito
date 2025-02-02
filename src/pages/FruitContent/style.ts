@@ -29,6 +29,7 @@ export const Container = styled.div<{ color?: string }>`
   animation: ${gradientAnimation} 5s linear infinite;
   @media (max-width: 500px) {
     padding: 15px;
+    flex-direction: column; /* Para melhor empilhamento em telas pequenas */
   }
 `;
 
@@ -54,6 +55,10 @@ export const Text = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 500px) {
+    width: 100%;
+    margin-bottom: 15px;
+  }
 `;
 
 export const Image = styled.img`
@@ -65,10 +70,7 @@ export const Image = styled.img`
 `;
 
 export const Buttons = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 25px;
+  width: 100%;
   margin-top: 15px;
 `;
 
@@ -137,4 +139,61 @@ export const StyledLink = styled(RouterLink)`
   text-decoration: none;
   color: inherit;
   align-self: center;
+  display: flex;
+  justify-content: center;
+`;
+
+export const CardWrapper = styled.div<{ color?: string }>`
+  background: linear-gradient(
+    -50deg,
+    ${(props) => props.color || "#e73c7e"},
+    ${(props) => props.color || "#23a6d5"},
+    ${(props) => props.color || "#23d5ab"}
+  );
+  background-size: 400% 400%;
+  animation: ${gradientAnimation} 5s linear infinite;
+  padding: 2px; 
+  border-radius: 8px;
+  display: inline-block;
+  transition: transform 0.2s;
+`;
+
+export const CardInner = styled.div`
+  background: #fff;
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 200px;
+  height: 100px;
+  text-align: center;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+
+  @media (max-width: 600px) {
+    width: 150px;
+    height: 80px;
+    padding: 12px 16px;
+  }
+`;
+
+export const TitleCard = styled.h2`
+  color: black;
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 100;
+  font-size: 16px;
+  @media (max-width: 600px) {
+    font-size: 14px;
+  }
+`;
+
+/* Container para o slider */
+export const SliderContainer = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  
 `;

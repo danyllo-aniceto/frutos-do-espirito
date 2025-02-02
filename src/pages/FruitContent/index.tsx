@@ -9,11 +9,16 @@ import {
   Button,
   BackButton,
   StyledLink,
+  CardWrapper,
+  CardInner,
+  TitleCard,
+  SliderContainer,
 } from "./style";
 import { useEffect } from "react";
 import { FiArrowLeft } from "react-icons/fi";
 import { useParams, useNavigate } from "react-router-dom";
 import fruits from "./../../consts/fruits";
+import Slider from "react-slick";
 
 export function FruitContent() {
   const { fruitId } = useParams<{ fruitId: string }>();
@@ -24,8 +29,30 @@ export function FruitContent() {
   }, []);
 
   const fruit = fruits.find((fruit) => fruit.id === fruitId);
-
   if (!fruit) return <div>Fruto não encontrado</div>;
+
+  const sliderSettings = {
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1, 
+    responsive: [
+      {
+        breakpoint: 1080,
+        settings: { slidesToShow: 3},
+      },
+      {
+        breakpoint: 900,
+        settings: { slidesToShow: 2,  },
+      },
+      {
+        breakpoint: 430,
+        settings: { slidesToShow: 1, centerMode: true, centerPadding: "20px", },
+      },
+    ],
+  };
+  
 
   return (
     <BaseLayout>
@@ -41,20 +68,28 @@ export function FruitContent() {
         <Image src={fruit.image} alt={fruit.name} />
       </Container>
       <Buttons>
-        {fruit.messages.length > 0 ? (
-          fruit.messages.map((message) => (
-            <StyledLink
-              to={`/fruit/${fruitId}/message/${message.id}`}
-              key={message.id}
-            >
-              <Button color={fruit.color}>{message.title}</Button>
-            </StyledLink>
-          ))
-        ) : (
-          <Button color={fruit.color} disabled>
-            Nenhuma mensagem disponível
-          </Button>
-        )}
+        <SliderContainer>
+          <Slider {...sliderSettings}>
+            {fruit.messages.length > 0 ? (
+              fruit.messages.map((message) => (
+                <StyledLink
+                  to={`/fruit/${fruitId}/message/${message.id}`}
+                  key={message.id}
+                >
+                  <CardWrapper color={fruit.color}>
+                    <CardInner>
+                      <TitleCard>{message.title}</TitleCard>
+                    </CardInner>
+                  </CardWrapper>
+                </StyledLink>
+              ))
+            ) : (
+              <Button color={fruit.color} disabled>
+                Nenhuma mensagem disponível
+              </Button>
+            )}
+          </Slider>
+        </SliderContainer>
       </Buttons>
     </BaseLayout>
   );
