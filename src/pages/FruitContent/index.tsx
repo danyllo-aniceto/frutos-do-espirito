@@ -44,7 +44,7 @@ export function FruitContent() {
       },
       {
         breakpoint: 900,
-        settings: { slidesToShow: 2,  },
+        settings: { slidesToShow: 2, arrows: false  },
       },
       {
         breakpoint: 430,
