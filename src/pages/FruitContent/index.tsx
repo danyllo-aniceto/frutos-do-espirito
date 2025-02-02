@@ -48,7 +48,7 @@ export function FruitContent() {
       },
       {
         breakpoint: 430,
-        settings: { slidesToShow: 1, centerMode: true, centerPadding: "20px", },
+        settings: { slidesToShow: 1, centerMode: true, centerPadding: "20px", arrows: false},
       },
     ],
   };
